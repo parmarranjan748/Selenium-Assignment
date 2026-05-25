@@ -1,0 +1,24 @@
+package AssignmentSelenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Assignment227 {
+
+	public static void main(String[] args) throws InterruptedException {
+		 ChromeDriver driver=new ChromeDriver();        
+         driver.get("https://www.facebook.com/login");
+         driver.manage().window().maximize();
+         Thread.sleep(3000);
+         WebElement e1 = driver.findElement(By.name("email"));
+        e1.sendKeys("testranjan123@gmail.com");
+        	
+        WebElement e2 = driver.findElement(By.name("pass"));
+        e2.sendKeys("1234" + Keys.ENTER);
+        
+	}
+
+}
